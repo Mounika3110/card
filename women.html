@@ -1,125 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   <title>Cloting For Women</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>Clothing For Women</title>
+    <script src="cart.js"></script>
+    <style>
+        .fil {
+            text-align: end;
+        }
+    </style>
 </head>
 <body>
-    <div class="women d-flex ">
-        <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17512.jpg?t=st=1732599663~exp=1732603263~hmac=65961a998ac8a50a93b5ef58e71796a3c1b15d75cd62997c554109f21f2cc85c&w=740" height="300px" >
+
+<div class="fil">
+    <form action="">
+        <input type="number" id="min" placeholder="min price">
+        <input type="number" id="max" placeholder="max price">
+        <input type="button" value="filter" id="filterButton">
+    </form>
+</div>
+
+<script>
+     document.querySelectorAll('.card').forEach(function(ele) {
+    document.getElementById('filterButton').addEventListener('click', function() {
+        let minimum = parseInt(document.getElementById('min').value);
+        let maximum = parseInt(document.getElementById('max').value);
+         let cost = parseInt(val.getAttribute('data-value'));
+            if (cost >= minimum && cost <= maximum) {
+                ele.style.display = "block";
+            } else {
+                ele.style.display = "none";
+            }
+        });
+    });
+</script>
+
+<div class="women d-flex flex-wrap">
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17512.jpg?t=st=1732599663~exp=1732603263~hmac=65961a998ac8a50a93b5ef58e71796a3c1b15d75cd62997c554109f21f2cc85c&w=740" alt="Women's Georgette Regular Kurta" height="300px">
         <div class="card-body">
-          <h5 class="card-title">Women's Georgette Regular Kurta</h5>
-          <p class="card-text">60$</p>
-          <p class="card-text">FREE Delivery by Amazon</p>
-          <a href="details.html"target="_blank"  class="btn btn-primary">Add to card</a>
+            <h5 class="card-title">Women's Georgette Regular Kurta</h5>
+            <p data-value="600">Price: 600</p>
+            <p class=" card-text">FREE Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
         </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-with-floral-dress-bare-feet_23-2148261281.jpg?t=st=1732601538~exp=1732605138~hmac=a8011ffb2a676a35933fd26c7b76b88dfe233b716e185a7c779a0f952d62d37a&w=740" height="300px" >
-        <div class="card-body">
-          <h5 class="card-title">INDO ERA Women's Embroidered Silk Blend Straight Kurta Pant With Dupatta Set</h5>
-          <p class="card-text">70$</p>
-          <p class="card-text">FREE Delivery by Amazon</p>
-          <a href="details.html"target="_blank"  class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-blue-floral-dress-looking-camera_23-2148261284.jpg?t=st=1732601762~exp=1732605362~hmac=c247e77ea49625e8cb3ca42b774fe013044a2f67a14ee2ca6ff399588e5b2f00&w=740" height="300px">
-        <div class="card-body">
-          <h5 class="card-title">W for Woman Solid Straight Kurta Sets With Slim Pants & Dupatta</h5>
-          <p class="card-text">55$</p>
-          <p class="card-text">Free Delivery</p>
-          <a href="details.html" target="_blank" class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-dress_1303-3764.jpg?t=st=1732601918~exp=1732605518~hmac=0c175a5da46a7fa0fb201f315e575ba92b33cfe61239ac591d050ac7c3e92f38&w=740"  height="300px">
-        <div class="card-body">
-          <h5 class="card-title">Women and Cotton A - Line Kurta Cropped Palazzo Suit Set</h5>
-          <p class="card-text">82$</p>
-          <p class="card-text">Free Delivery</p>
-          <a href="details.html"target="_blank" class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
     </div>
-    <div class="women d-flex ">
-        <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17512.jpg?t=st=1732599663~exp=1732603263~hmac=65961a998ac8a50a93b5ef58e71796a3c1b15d75cd62997c554109f21f2cc85c&w=740" height="300px" >
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/woman-with-floral-dress-bare-feet_23-2148261281.jpg?t=st=1732601538~exp=1732605138~hmac=a8011ffb2a676a35933fd26c7b76b88dfe233b716e185a7c779a0f952d62d37a&w=740" alt="INDO ERA Women's Embroidered Silk Blend Straight Kurta Pant With Dupatta Set" height="300px">
         <div class="card-body">
-          <h5 class="card-title">Women's Georgette Regular Kurta</h5>
-          <p class="card-text">60$</p>
-          <p class="card-text">FREE Delivery by Amazon</p>
-          <a href="details.html"target="_blank"  class="btn btn-primary">Add to card</a>
+            <h5 class="card-title">INDO ERA Women's Embroidered Silk Blend Straight Kurta Pant With Dupatta Set</h5>
+            <p data-value="700">Price: 700</p>
+            <p class="card-text">FREE Delivery by Amazon</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
         </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-with-floral-dress-bare-feet_23-2148261281.jpg?t=st=1732601538~exp=1732605138~hmac=a8011ffb2a676a35933fd26c7b76b88dfe233b716e185a7c779a0f952d62d37a&w=740" height="300px" >
-        <div class="card-body">
-          <h5 class="card-title">INDO ERA Women's Embroidered Silk Blend Straight Kurta Pant With Dupatta Set</h5>
-          <p class="card-text">70$</p>
-          <p class="card-text">FREE Delivery by Amazon</p>
-          <a href="details.html"target="_blank"  class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-blue-floral-dress-looking-camera_23-2148261284.jpg?t=st=1732601762~exp=1732605362~hmac=c247e77ea49625e8cb3ca42b774fe013044a2f67a14ee2ca6ff399588e5b2f00&w=740" height="300px">
-        <div class="card-body">
-          <h5 class="card-title">W for Woman Solid Straight Kurta Sets With Slim Pants & Dupatta</h5>
-          <p class="card-text">55$</p>
-          <p class="card-text">Free Delivery</p>
-          <a href="details.html" target="_blank" class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-dress_1303-3764.jpg?t=st=1732601918~exp=1732605518~hmac=0c175a5da46a7fa0fb201f315e575ba92b33cfe61239ac591d050ac7c3e92f38&w=740"  height="300px">
-        <div class="card-body">
-          <h5 class="card-title">Women and Cotton A - Line Kurta Cropped Palazzo Suit Set</h5>
-          <p class="card-text">82$</p>
-          <p class="card-text">Free Delivery</p>
-          <a href="details.html"target="_blank" class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
     </div>
-    <div class="women d-flex ">
-        <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/young-woman-beautiful-dress_1303-17512.jpg?t=st=1732599663~exp=1732603263~hmac=65961a998ac8a50a93b5ef58e71796a3c1b15d75cd62997c554109f21f2cc85c&w=740" height="300px" >
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/woman-blue-floral-dress-looking-camera_23-2148261284.jpg?t=st=1732601762~exp=1732605362~hmac=c247e77ea49625e8cb3ca42b774fe013044a2f67a14ee2ca6ff399588e5b2f00&w=740" alt="W for Woman Solid Straight Kurta Sets With Slim Pants & Dupatta" height="300px">
         <div class="card-body">
-          <h5 class="card-title">Women's Georgette Regular Kurta</h5>
-          <p class="card-text">60$</p>
-          <p class="card-text">FREE Delivery by Amazon</p>
-          <a href="details.html"target="_blank"  class="btn btn-primary">Add to card</a>
+            <h5 class="card-title">W for Woman Solid Straight Kurta Sets With Slim Pants & Dupatta</h5>
+            <p data-value="550">Price: 550</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
         </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-with-floral-dress-bare-feet_23-2148261281.jpg?t=st=1732601538~exp=1732605138~hmac=a8011ffb2a676a35933fd26c7b76b88dfe233b716e185a7c779a0f952d62d37a&w=740" height="300px" >
-        <div class="card-body">
-          <h5 class="card-title">INDO ERA Women's Embroidered Silk Blend Straight Kurta Pant With Dupatta Set</h5>
-          <p class="card-text">70$</p>
-          <p class="card-text">FREE Delivery by Amazon</p>
-          <a href="details.html"target="_blank"  class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-blue-floral-dress-looking-camera_23-2148261284.jpg?t=st=1732601762~exp=1732605362~hmac=c247e77ea49625e8cb3ca42b774fe013044a2f67a14ee2ca6ff399588e5b2f00&w=740" height="300px">
-        <div class="card-body">
-          <h5 class="card-title">W for Woman Solid Straight Kurta Sets With Slim Pants & Dupatta</h5>
-          <p class="card-text">55$</p>
-          <p class="card-text">Free Delivery</p>
-          <a href="details.html" target="_blank" class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
-      <div class="card m-3" style="width: 30rem;">
-        <img src="https://img.freepik.com/free-photo/woman-dress_1303-3764.jpg?t=st=1732601918~exp=1732605518~hmac=0c175a5da46a7fa0fb201f315e575ba92b33cfe61239ac591d050ac7c3e92f38&w=740"  height="300px">
-        <div class="card-body">
-          <h5 class="card-title">Women and Cotton A - Line Kurta Cropped Palazzo Suit Set</h5>
-          <p class="card-text">82$</p>
-          <p class="card-text">Free Delivery</p>
-          <a href="details.html"target="_blank" class="btn btn-primary">Add To Card</a>
-        </div>
-      </div>
     </div>
-</body></html>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/woman-dress_1303-3764.jpg?t=st=1732601918~exp=1732605518~hmac=0c175a5da46a7fa0fb201f315e575ba92b33cfe61239ac591d050ac7c3e92f38&w=740" alt="Women and Cotton A - Line Kurta Cropped Palazzo Suit Set" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Women and Cotton A - Line Kurta Cropped Palazzo Suit Set</h5>
+            <p data-value="820">Price: 820</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/beautiful-young-woman-wearing-sari_23-2149502970.jpg?semt=ais_hybrid" alt="Women in Sari" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Women in Sari</h5>
+            <p data-value="1450">Price: 1450</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/young-attractive-indian-woman-traditional-dress-woman-dancing-against-white-background_1157-48166.jpg?t=st=1732770661~exp=1732774261~hmac=a8ea78f01994d7b7c3f35ca2c336f3897d9403e63446e219dbcf22ff7df878aa&w=740" alt="Traditional Dress" height="300px">
+        <div class="card-body">
+ <h5 class="card-title">Traditional Dress</h5>
+            <p data-value="900">Price: 900</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/young-woman-beautiful-yellow-dress_1303-17541.jpg?t=st=1732770716~exp=1732774316~hmac=d91ebb21f4d8f91b9375949cf99bb0aeb4b495de0aa823912eb92ade02ad59f6&w=740" alt="Yellow Dress" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Yellow Dress</h5>
+            <p data-value="1000">Price: 1000</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/young-indian-woman-wearing-sari_23-2149400871.jpg?t=st=1732770751~exp=1732774351~hmac=13cacdc34afd5264624e15f1cdbf755a7faa7a632ee3a321f073a670930e2c0d&w=740" alt="Indian Woman in Sari" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Indian Woman in Sari</h5>
+            <p data-value="1820">Price: 1820</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/studio-portrait-young-woman-wearing-traditional-sari-garment_23-2149565125.jpg?semt=ais_hybrid" alt="Traditional Sari" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Traditional Sari</h5>
+            <p data-value="2000">Price: 2000</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/attractive-south-asian-woman-deep-red-gown-dress-posed-studio-against-windows-night_627829-5282.jpg?semt=ais_hybrid" alt="Deep Red Gown" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Deep Red Gown</h5>
+            <p data-value="1520">Price: 1520</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/fashion-photo-young-magnificent-woman-turquoise-dress_158595-380.jpg?semt=ais_hybrid" alt="Turquoise Dress" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Turquoise Dress</h5>
+            <p data-value="1120">Price: 1120</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+
+    <div class="card m-1" style="width: 18rem;">
+        <img src="https://img.freepik.com/free-photo/woman-posing-outdoors- steps-with-shopping-bags_23-2148695675.jpg?t=st=1732771245~exp=1732774845~hmac=59ffbbb369be00f34638e35418b877fecf311f710a369e6270062bcd7373f3dc&w=740" alt="Woman with Shopping Bags" height="300px">
+        <div class="card-body">
+            <h5 class="card-title">Woman with Shopping Bags</h5>
+            <p data-value="1020">Price: 1020</p>
+            <p class="card-text">Free Delivery</p>
+            <a href="details.html" target="_blank" class="btn btn-primary">Open</a>
+        </div>
+    </div>
+</div>
+</body>
+</html> 
